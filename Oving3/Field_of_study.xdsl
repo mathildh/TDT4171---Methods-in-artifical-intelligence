@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Grades">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Place_of_study">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Grades</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Social_affiliation">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Place_of_study</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Workload_during_study_">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Length_of_study">
+			<state id="More_than_5" />
+			<state id="Four_or_five" />
+			<state id="Three_or_less" />
+			<probabilities>0.4 0.4 0.2</probabilities>
+		</cpt>
+		<decision id="What_to_choose">
+			<state id="Engineering" />
+			<state id="Medicine" />
+			<state id="Psychology" />
+			<state id="Healthcare" />
+			<state id="Politics" />
+			<parents>Length_of_study</parents>
+		</decision>
+		<cpt id="Average_income_after_study">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>What_to_choose</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Being_in_the__spotlight_">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>What_to_choose</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Workload_after_study">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>What_to_choose</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Interaction_with_humans">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Practical_work_">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Stress_intensity_during_study">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Workload_during_study_</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Cost">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Place_of_study</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<utility id="Happiness">
+			<utilities>0</utilities>
+		</utility>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5590.0" name="Network1" faultnameformat="nodestate">
+			<node id="Social_affiliation">
+				<name>Social affiliation</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>289 308 375 361</position>
+			</node>
+			<node id="Workload_during_study_">
+				<name>Workload during study </name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>342 491 433 547</position>
+			</node>
+			<node id="Average_income_after_study">
+				<name>Average income after study</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>536 123 637 186</position>
+			</node>
+			<node id="Workload_after_study">
+				<name>Workload after study</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>551 209 630 258</position>
+			</node>
+			<node id="Place_of_study">
+				<name>Place of study</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>135 388 215 438</position>
+			</node>
+			<node id="Length_of_study">
+				<name>Length of study</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>155 90 243 145</position>
+			</node>
+			<node id="Interaction_with_humans">
+				<name>Interaction with humans</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>123 308 218 367</position>
+			</node>
+			<node id="Practical_work_">
+				<name>Practical work </name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>163 228 245 279</position>
+			</node>
+			<node id="Cost">
+				<name>Cost</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>306 400 348 426</position>
+			</node>
+			<node id="Grades">
+				<name>Grades</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>18 397 70 429</position>
+			</node>
+			<node id="Happiness">
+				<name>Happiness</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>757 256 835 308</position>
+			</node>
+			<node id="What_to_choose">
+				<name>What to choose</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>325 31 413 57</position>
+			</node>
+			<node id="Being_in_the__spotlight_">
+				<name>Being in the &quot;spotlight&quot;</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>558 289 640 340</position>
+			</node>
+			<node id="Stress_intensity_during_study">
+				<name>Stress intensity during study</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>473 436 574 499</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

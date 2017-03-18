@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Religion">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Working_parents">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Religion</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Houshold_income">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Working_parents</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Fiber_eating_habits">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Houshold_income</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Fish_eating_habits">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Houshold_income</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Drinking_habits">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Houshold_income Religion</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Number_of_children">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Working_parents</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="History_of_illness">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Fiber_eating_habits Fish_eating_habits Drinking_habits Number_of_children</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Node2">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>History_of_illness</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5590.0" name="Network1" faultnameformat="nodestate">
+			<node id="Node2">
+				<name>Illness at the moment</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>509 475 614 559</position>
+			</node>
+			<node id="History_of_illness">
+				<name>History of illness</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>514 375 605 431</position>
+			</node>
+			<node id="Number_of_children">
+				<name>Number of children</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>288 198 389 261</position>
+			</node>
+			<node id="Working_parents">
+				<name>Working parents</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>394 64 483 119</position>
+			</node>
+			<node id="Religion">
+				<name>Religion</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>615 8 686 47</position>
+			</node>
+			<node id="Houshold_income">
+				<name>Household income</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>586 146 679 204</position>
+			</node>
+			<node id="Fish_eating_habits">
+				<name>Fish-eating habits</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>595 242 690 301</position>
+			</node>
+			<node id="Fiber_eating_habits">
+				<name>Fiber-eating habits</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>476 243 575 304</position>
+			</node>
+			<node id="Drinking_habits">
+				<name>Drinking habits</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>701 246 783 297</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
